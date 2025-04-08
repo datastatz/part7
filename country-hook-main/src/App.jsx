@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import { Table } from 'react-bootstrap'
 
 const useField = (type) => {
   const [value, setValue] = useState('')
@@ -63,7 +64,8 @@ const App = () => {
   }
 
   return (
-    <div>
+    
+    <div className='container'>
       <form onSubmit={fetch}>
         <input {...nameInput} />
         <button>find</button>
